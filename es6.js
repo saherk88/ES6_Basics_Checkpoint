@@ -8,25 +8,14 @@ const getAge = (pet) => {
     return new Date().getFullYear() - pet.bornOn;
 }
 
-
-let petsWithAge = [];
-pets.forEach((pet) => {
-    pet.age = getAge(pet);
-    petsWithAge.push(pet);
-});
+pets.forEach((pet) =>pet.age = getAge(pet););
 console.log(petsWithAge);
 
 
-let dogs = [];
-pets.forEach((pet) => {
-    pets.filter(pets => pets.type === "dog")
-    dogs.push(pet);
-});
-console.log(dogs);
 
-let jasper;
-pets.forEach((pet) => {
-    pets.filter(pets => pets.name === "Jasper")
-    jasper = pet;
-});
+ const dogs = pets.filter(pets => pets.type === "dog")
+
+console.log(dogs);
+ const jasper =pets.find(pets => pets.name === "Jasper")
+
 console.log(`Jasper is ${jasper.age} years old`);
